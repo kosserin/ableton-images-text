@@ -1,0 +1,200 @@
+@import "colors";
+@import "media-queries";
+
+nav {
+  position: relative;
+  width: 100vw;
+  height: 10vh;
+  border-bottom: 2px solid rgb(241, 241, 241);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5vw;
+  align-items: center;
+  text-align: center;
+
+  .left-side {
+    display: flex;
+    align-items: center;
+
+    .nav-logo {
+      width: 50px;
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      justify-content: flex-start;
+      margin-left: 30px;
+
+      @include miniLaptop {
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        width: 100vw;
+        height: 90vh;
+        flex-direction: column;
+        z-index: 5;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        transform: translateX(100%);
+        transition: all 750ms ease;
+      }
+
+      li {
+        margin: 0 15px;
+
+        @include miniLaptop {
+          margin: 15px;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000000;
+          font-weight: 600;
+          text-transform: capitalize;
+          font-size: 1rem;
+        }
+
+        .more {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-weight: 600;
+      margin: 0 15px;
+    }
+
+    .try {
+      color: $blue;
+      font-size: 1.1rem;
+
+      @include phone {
+        font-size: 0.9rem;
+      }
+    }
+
+    .log {
+      @include phone {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+
+    @include miniLaptop {
+      display: block;
+      cursor: pointer;
+
+      div {
+        margin: 5px;
+        height: 3px;
+        width: 30px;
+        background: #000000;
+        transition: all 500ms ease;
+      }
+    }
+  }
+}
+
+.under-nav {
+  display: flex;
+  list-style: none;
+  width: 100vw;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10vh;
+  position: fixed;
+  background: #ffffff;
+  top: 10vh;
+  left: 0;
+  transition: all 150ms ease;
+  z-index: 3;
+
+  li {
+    margin: 0 10px;
+
+    a {
+      text-decoration: none;
+      text-transform: capitalize;
+      font-weight: 600;
+      color: #000000;
+      font-size: 0.9rem;
+    }
+
+    .active {
+      color: $orange;
+    }
+  }
+}
+
+.hide {
+  height: 0;
+  transition: all 150ms ease;
+}
+
+.header-container {
+  width: 90vw;
+  height: 90vh;
+  background: url("/ableton-images-text/assets/troy-t-dX76Mts-LVM-unsplash.jpg")
+    no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: $orange;
+    font-size: 8rem;
+    font-weight: 500;
+    transform: translateY(10vh);
+    pointer-events: none;
+
+    @include mini {
+      font-size: 5rem;
+    }
+
+    @include phone {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.show {
+  transform: translateX(0);
+  transition: all 750ms ease;
+}
+
+.toggle .line1 {
+  transform: rotate(45deg) translate(5px, 6px);
+  transition: all 500ms ease;
+}
+
+.toggle .line2 {
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+.toggle .line3 {
+  transform: rotate(-45deg) translate(5px, -6px);
+  transition: all 500ms ease;
+}

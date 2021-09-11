@@ -1,0 +1,231 @@
+@import "colors";
+@import "media-queries";
+
+footer {
+  border-top: 2px solid rgb(241, 241, 241);
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 50px;
+
+  @include phone {
+    width: 90vw;
+  }
+
+  h1 {
+    margin: 100px 0 50px 0;
+    font-size: 3rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include phone {
+      grid-gap: 20px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        margin: 7px 0;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 600;
+
+        @include tablet {
+          font-size: 0.9rem;
+        }
+
+        @include phone {
+          font-size: 0.7rem;
+        }
+      }
+
+      h2 {
+        font-size: 500;
+        margin-bottom: 5px;
+        font-size: 1rem;
+
+        @include tablet {
+          font-size: 0.9rem;
+        }
+
+        @include phone {
+          font-size: 0.7rem;
+        }
+      }
+
+      .social {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @include phone {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+        }
+
+        a {
+          text-decoration: none;
+          margin: 0 5px;
+          font-size: 1.8rem;
+          color: #ffffff;
+
+          @include phone {
+            font-size: 1rem;
+            margin: 0;
+          }
+        }
+
+        a:first-of-type {
+          margin-left: 0;
+        }
+
+        .fa-facebook {
+          background: $blue;
+          padding: 0.4rem;
+        }
+
+        .fa-youtube {
+          background: red;
+          padding: 0.4rem;
+        }
+
+        .fa-twitter {
+          background: $sky;
+          padding: 0.4rem;
+        }
+
+        .fa-instagram {
+          background: $orange;
+          padding: 0.4rem;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        line-height: 30px;
+        font-size: 0.9rem;
+
+        @include tablet {
+          line-height: 25px;
+        }
+
+        @include phone {
+          font-size: 0.7rem;
+          line-height: 20px;
+        }
+      }
+
+      form {
+        display: flex;
+        margin-top: 15px;
+
+        input[type="email"] {
+          width: 70%;
+          background: rgb(231, 231, 231);
+          color: rgb(105, 105, 105);
+          border: none;
+          padding: 0.8rem;
+
+          @include phone {
+            font-size: 0.7rem;
+          }
+        }
+
+        input[type="submit"] {
+          width: 30%;
+          border: none;
+          outline: none;
+          background: $blue;
+          color: #ffffff;
+          font-weight: 600;
+
+          @include phone {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .select {
+        display: flex;
+        flex-direction: row;
+
+        select {
+          width: 40%;
+          background: rgb(231, 231, 231);
+          border: none;
+          padding: 0.5rem;
+          margin-right: 2px;
+          font-size: 0.7rem;
+          font-weight: 600;
+
+          @include phone {
+            width: 50%;
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-container {
+    padding: 50px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include phone {
+      flex-direction: column;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin: 0 5px;
+
+        a {
+          text-decoration: none;
+          color: #000000;
+          font-size: 0.7rem;
+          font-weight: 700;
+
+          @include phone {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+
+    span {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 0.7rem;
+      font-weight: 600;
+
+      @include tablet {
+        margin-top: 30px;
+      }
+
+      img {
+        width: 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

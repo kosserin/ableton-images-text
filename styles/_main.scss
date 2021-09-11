@@ -1,0 +1,297 @@
+@import "colors";
+@import "media-queries";
+
+main {
+  .text-section {
+    width: 50%;
+    margin: 0 auto;
+    padding: 130px 0;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    h1 {
+      font-weight: 600;
+      line-height: 40px;
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin-top: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      font-size: 0.9rem;
+    }
+  }
+
+  #second {
+    display: flex;
+    width: 100vw;
+    height: 130vh;
+
+    @include tablet {
+      height: 100vh;
+    }
+
+    .left-side {
+      width: 45%;
+      position: relative;
+      img {
+        width: 600px;
+        height: 100vh;
+        transform: translate(10vw, 5vh);
+
+        @include laptop {
+          transform: translate(5vw, 5vh);
+          width: 500px;
+        }
+
+        @include mini {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 400px;
+          height: 80vh;
+        }
+
+        @include tablet {
+          width: 250px;
+          height: 80vh;
+        }
+
+        @include phone {
+          height: 50vh;
+          width: 200px;
+          transform: translate(5vw, -70%);
+        }
+      }
+    }
+
+    .right-side {
+      height: 130vh;
+      width: 55%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $yellow;
+
+      @include tablet {
+        height: 80vh;
+      }
+
+      img {
+        width: 60%;
+        height: 40%;
+
+        @include phone {
+          transform: translateX(30%);
+        }
+      }
+    }
+  }
+
+  #third {
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      margin: 100px 0;
+
+      iframe {
+        width: 100%;
+        height: 345px;
+        border: none;
+        outline: none;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 0.75rem;
+        margin-top: 10px;
+      }
+    }
+
+    .under-video {
+      margin-top: 100px;
+    }
+  }
+
+  #fourth {
+    width: 100vw;
+    height: 130vh;
+
+    @include tablet {
+      height: 80vh;
+    }
+
+    .fourth-container {
+      position: relative;
+      height: 130vh;
+      width: 60%;
+      background: $green;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      @include tablet {
+        height: 80vh;
+      }
+
+      img {
+        width: 50%;
+        height: 35%;
+        transform: translateX(-50px);
+      }
+
+      .last-image {
+        position: absolute;
+        top: 50%;
+        right: -50%;
+        transform: translateY(-50%);
+        height: 65%;
+        width: 60%;
+      }
+    }
+  }
+
+  #sixth {
+    width: 80vw;
+    margin: 0 auto;
+    background: url("/ableton-images-text/assets/troy-t-dX76Mts-LVM-unsplash.jpg")
+      no-repeat center;
+    background-size: cover;
+    height: 100vh;
+
+    @include phone {
+      height: 50vh;
+    }
+  }
+
+  #eight {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130vh;
+
+    @include tablet {
+      height: 80vh;
+    }
+
+    .container {
+      position: absolute;
+      width: 60vw;
+      height: 130vh;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $purple;
+
+      @include mini {
+        width: 80vw;
+      }
+
+      @include tablet {
+        height: 80vh;
+      }
+    }
+
+    img {
+      width: 50%;
+      position: relative;
+      z-index: 3;
+    }
+
+    img:first-of-type {
+      width: 30%;
+      height: 50vh;
+      margin-left: 150px;
+
+      @include mini {
+        margin-left: 50px;
+      }
+
+      @include phone {
+        margin-left: 20px;
+        height: 40vh;
+      }
+    }
+
+    img:last-of-type {
+      width: 50%;
+      height: 80vh;
+
+      @include phone {
+        height: 60vh;
+      }
+    }
+  }
+
+  #tenth {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    padding-bottom: 100px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+
+    .image-container {
+      height: 100%;
+      width: 100%;
+      background: url("/ableton-images-text/assets/troy-t-dX76Mts-LVM-unsplash.jpg")
+        no-repeat center;
+      background-size: cover;
+    }
+
+    .text-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 20%;
+      background: $sky;
+
+      @include tablet {
+        padding: 0 10%;
+      }
+
+      h1 {
+        font-weight: 600;
+        line-height: 40px;
+        font-size: 1.4rem;
+
+        @include tablet {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+      }
+
+      .button {
+        margin-top: 30px;
+        width: 100%;
+
+        @include tablet {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
